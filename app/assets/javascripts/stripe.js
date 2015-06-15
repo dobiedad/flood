@@ -1,8 +1,12 @@
 function stripeCheckout() {
   if ($('input[name=amount]').val() == undefined || $('input[name=amount]').val() == 0) {
-    sweetAlert("Oops...", "Please enter the amount which you wish to donate ", "warning");
+    sweetAlert("Oops...", "Please enter the amount you wish to donate ", "warning");
       return false;
     }
+    if ( $('input[name=amount]').val() < 1) {
+      sweetAlert("Oops...", "Minimum donation is £1", "warning");
+        return false;
+      }
 
   if ($('input[name=email]').val().indexOf('@') == -1) {
   sweetAlert("Oops...", "Please enter your email ", "warning");

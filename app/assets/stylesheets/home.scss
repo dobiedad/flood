@@ -148,7 +148,7 @@ a:focus {
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    min-height: 450px;
     text-align: center;
     color: #fff;
     background: image-url("hippo.jpg");
@@ -470,6 +470,8 @@ input{
 }
 #about {
   padding-bottom: 80px;
+  padding-top: 100px;
+
 }
 .download-section{
   min-height: 100vh;
@@ -497,12 +499,27 @@ input{
   transform: translate3d(0, 0, 0);
 }
 #contact{
-  width: 100% !important;
+  width: 95% !important;
   padding-left: 0px;
   padding-right: 0px;
+  padding-top: 0px;
+}
+#charity-event{
+  min-height: 800px;
+  padding-top: 100px;
+
 }
 .charity-content{
   max-width: 800px;
   margin: auto;
   font-weight: 100;
+  width: 80%;
+
+}
+#map{
+  margin: auto;
+  min-height: 320px;
+}
+.donate{
+  color:white;
 }
