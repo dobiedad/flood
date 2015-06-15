@@ -151,7 +151,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: image-url("hippo.jpg") no-repeat bottom center scroll;
+    background: image-url("hippo.jpg");
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -476,4 +476,33 @@ input{
 }
 .navbar-brand{
   font-size: 15px;
+}
+.intro{
+  -webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+   -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+   -ms-backface-visibility: hidden;
+   backface-visibility: hidden;
+   -webkit-perspective: 1000;
+   -moz-perspective: 1000;
+   -ms-perspective: 1000;
+   perspective: 1000;
+   -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#contact{
+  width: 100% !important;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.charity-content{
+  max-width: 800px;
+  margin: auto;
+  font-weight: 100;
 }

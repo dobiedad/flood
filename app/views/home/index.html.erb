@@ -1,52 +1,97 @@
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading ">Donate Now</h1>
-                        <a href="#donate" class="btn btn-circle page-scroll">
-                            <i class="fa fa-gbp animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
+<body data-spy="scroll" data-target=".navbar-fixed-top" id="page-top">
+<!-- Intro Header -->
+  <div class="intro">
+    <div class="intro-body">
+      <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h1>Tbilisi Flood</h1>
-                <p>
-                  12 people are reported dead and dozens missing as flash floods hit Tbilisi, Georgia. Officials have warned people to stay at home as tigers, bears and wolves escaped from the zoo and are roaming the city.Lions, bears, tigers and wolves were among at least 30 animals that escaped and were on Sunday roaming the streets.
-                </p>
-                <h2>Live Updates</h2>
-                <a class="twitter-timeline" href="https://twitter.com/hashtag/tbilisiflood" data-widget-id="610443197223931904">#tbilisiflood Tweets</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="donate" class=" text-center">
-      <div class="overlay">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h1 class="">How you can help</h1>
-                    <h3>Donate</h3>
-                    <p>Help the animals and people recover their life</p>
-
-                    <%= render 'layouts/stripe' %>
-                </div>
-            </div>
+          <div class="col-md-8 col-md-offset-2">
+            <h1 class="brand-heading ">Donate Now</h1>
+            <a class="btn btn-circle page-scroll" href="#donate">
+              <i class="fa fa-gbp animated"></i>
+            </a>
+          </div>
         </div>
       </div>
-
-    </section>
-
+    </div>
+  </div>
+  <script type="text/javascript">
+    $ (window).scroll(function () {
+      var body = $('body');
+      var top = $(this).scrollTop();
+      $('.intro').css('top', top / 2);
+    });
+  </script>
+<!-- About Section -->
+  <section class="container content-section text-center" id="about">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h1>Tbilisi Flood</h1>
+        <p>
+          12 people are reported dead and dozens missing as flash floods hit Tbilisi, Georgia. Officials have warned people to stay at home as tigers, bears and wolves escaped from the zoo and are roaming the city.Lions, bears, tigers and wolves were among at
+          least 30 animals that escaped and were on Sunday roaming the streets.
+        </p>
+        <h2>Live Updates</h2>
+        <a class="twitter-timeline" data-widget-id="610443197223931904" href="https://twitter.com/hashtag/tbilisiflood">#tbilisiflood Tweets</a>
+        <script>
+          !function (d, s, id) {
+            var js,
+              fjs = d.getElementsByTagName(s)[0],
+              p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = p + "://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }
+          }(document, "script", "twitter-wjs");
+        </script>
+      </div>
+    </div>
+  </section>
+  <section class=" text-center" id="donate">
+    <div class="overlay">
+      <div class="download-section">
+        <div class="container">
+          <div class="col-lg-8 col-lg-offset-2">
+            <h1 class="">How you can help?</h1>
+            <h3>Donate</h3>
+            <p>Help the people and animals recover their lives</p>
+            <%= render 'layouts/stripe' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content-section text-center" id="contact">
+    <div class="row">
+      <div class="">
+        <h1>Charity Event @ <a href="http://www.tamada.co.uk/">Tamada</a></h2>
+        <h2>17th June 2015</h2>
+        <p class="charity-content"><a href="http://www.tamada.co.uk/">Tamada</a> will be hosting a charity event on the 17th of June, with multiple live performers to help Georgian people and wild nature.100% of proceeding will be going to charities in Georgia</p>
+        <p class="charity-content">
+          And of course there will be georgian food and wine too
+        </p>
+        <p><a href="mailto:info@tamada.co.uk">info@tamada.co.uk</a>
+        </p>
+        <ul class="list-inline banner-social-buttons">
+          <li>
+            <a class="btn btn-default btn-lg" href="tel:+442073722882">
+              <i class="fa fa-phone fa-fw"></i>
+              <span class="network-name">Call Us</span></a>
+          </li>
+          <li>
+            <a class="btn btn-default btn-lg" href="https://www.facebook.com/tamada.authenticgeorgiancuisine?ref=ts&fref=ts">
+              <i class="fa fa-facebook fa-fw"></i>
+              <span class="network-name">Facebook</span></a>
+          </li>
+          <li>
+            <a class="btn btn-default btn-lg" href="http://www.tamada.co.uk/reservations.html">
+              <i class="fa fa-envelope-o fa-fw"></i>
+              <span class="network-name">Bookings</span></a>
+          </li>
+        </ul>
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
 </body>
