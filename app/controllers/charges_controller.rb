@@ -5,7 +5,7 @@ class ChargesController < ApplicationController
 
 def create
   @amount = params[:amount].to_i * 100
-
+  @email = params[:email]
   customer = Stripe::Customer.create(
     :email => params[:email],
     :card  => params[:stripeToken]
@@ -14,7 +14,7 @@ def create
   charge = Stripe::Charge.create(
     :customer    => customer.id,
     :amount      => @amount,
-    :description => 'Rails Stripe customer',
+    :description => 'Georgia Flood Donation',
     :currency    => 'GBP'
   )
   DonationNotifier.donation_confirmation(email: params[:email], amount: params[:amount]).deliver

@@ -403,81 +403,74 @@ input{
   min-width: 200px;
 }
 ::-webkit-input-placeholder {
-   padding-top: 2px;
-   padding-left: 5px;
+  padding-top: 2px !important;
+  padding-left: 5px !important;
 
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  padding-top: 2px;
-  padding-left: 5px;}
+  padding-top: 2px !important;
+  padding-left: 5px !important;
+  }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-  padding-top: 2px;
-  padding-left: 5px;}
+  padding-top: 2px !important;
+  padding-left: 5px !important;
+  }
 
 :-ms-input-placeholder {
-  padding-top: 2px;
-  padding-left: 5px;
+  padding-top: 2px !important;
+  padding-left: 5px !important;
 }
 .donation-l{
   padding: 10px;
   font-size: 20px;
 }
-.shimmer {
-  text-align: center;
-  color: rgba(255,255,255,0.1);
-  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
-  background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
-  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
-  -webkit-background-size: 125px 100%;
-  -moz-background-size: 125px 100%;
-  background-size: 125px 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-animation-name: shimmer;
-  -moz-animation-name: shimmer;
-  animation-name: shimmer;
-  -webkit-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-color: #222;
+input{
+  padding-top: 2px !important;
+  padding-left: 7px !important;
 }
-@-moz-keyframes shimmer {
-  0% {
-    background-position: top left;
+.sweet-alert {
+  background:rgba(0, 0, 0, 0.9) !important;
+  font-family: 'Josefin Slab', serif;
+  & button {
+    background-color: transparent !important;
+    border: 1px solid rgb(248, 212, 134) !important;
   }
-  100% {
-    background-position: top right;
+  & h2 {
+    color:white !important;
+    font-family: dynalight;
+    font-weight:100;
+    font-size:40px;
+  }
+  & p {
+    color:rgb(253, 240, 211) !important;
+  }
+  & .sa-icon{
+    border:none;
+    &.sa-error{
+      border: 2px solid #F27474;
+    }
+    &.sa-warning{
+      border: 2px solid #F8BB86;
+    }
   }
 }
-@-webkit-keyframes shimmer {
-  0% {
-    background-position: top left;
-  }
-  100% {
-    background-position: top right;
-  }
+
+
+.sweet-alert .sa-icon.sa-success::before, .sweet-alert .sa-icon.sa-success::after{
+  background:transparent !important;
+
 }
-@-o-keyframes shimmer {
-  0% {
-    background-position: top left;
-  }
-  100% {
-    background-position: top right;
-  }
+
+
+
+.sweet-alert .sa-icon.sa-success .sa-fix {
+  background-color: transparent !important;
 }
-@keyframes shimmer {
-  0% {
-    background-position: top left;
-  }
-  100% {
-    background-position: top right;
-  }
+#about {
+  padding-bottom: 80px;
+}
+.download-section{
+  min-height: 100vh;
 }
