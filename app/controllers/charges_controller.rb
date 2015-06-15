@@ -17,6 +17,7 @@ def create
     :description => 'Rails Stripe customer',
     :currency    => 'GBP'
   )
+  DonationNotifier.donation_confirmation(email: params[:email], amount: params[:amount]).deliver
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
