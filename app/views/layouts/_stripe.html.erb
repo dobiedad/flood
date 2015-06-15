@@ -1,0 +1,19 @@
+<%= form_tag charges_path ,:remote => true, :id => 'donation-form' do %>
+<label class="donation-l" name="donation" >Amount</label>
+<br>
+  <input type="number" id="amount" placeholder="20.50" name="amount"></input>
+<br>
+  <label class="donation-l">Email</label>
+  <br>
+  <input type="text" id="email" placeholder="john@smith.com" name="email"></input>
+  <br>
+
+  <input type="hidden" name="stripeToken" value=""/>
+  <br>
+
+  <div id="checkout"class="btn btn-default btn-lg" type="button" onClick="stripeCheckout()" data-icon="<%=asset_path'stolle.png'%>">Donate
+  </div>
+
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+
+<% end %>
