@@ -434,7 +434,6 @@ input{
   transform: translate3d(0, 0, 0);
 }
 #contact{
-  width: 95% !important;
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 0px;
@@ -442,6 +441,8 @@ input{
 }
 #charity-event{
   min-height: 800px;
+  padding: 0px;
+
   padding-top: 100px;
 
 }
