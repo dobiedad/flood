@@ -36,16 +36,19 @@ function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
-        zoom: 16,
+
 
         // The latitude and longitude to center the map (always required)
         center: new google.maps.LatLng(51.537203, -0.185587), // New York
+        zoom: 16,
+           scrollwheel: false,
+           navigationControl: false,
+           mapTypeControl: false,
+           zoomControl: false,
 
-        // Disables the default Google Maps UI components
-        disableDefaultUI: true,
-        scrollwheel: false,
 
+           scaleControl: false,
+           disableDefaultUI: true,
         // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{
@@ -127,7 +130,7 @@ function init() {
         }, {
             "elementType": "labels.icon",
             "stylers": [{
-                "visibility": "off"
+                "visibility": "on"
             }]
         }, {
             "featureType": "transit",
