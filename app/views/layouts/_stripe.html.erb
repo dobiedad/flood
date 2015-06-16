@@ -1,11 +1,11 @@
 <%= form_tag charges_path ,:remote => true, :id => 'donation-form' do %>
 <label class="donation-l" name="donation" >Amount</label>
 <br>
-  <input type="number" id="amount" placeholder="20.50" name="amount"></input>
+  <input type="number" id="amount" placeholder="£1 Minimum" name="amount"></input>
 <br>
   <label class="donation-l">Email</label>
   <br>
-  <input type="text" id="email" placeholder="john@smith.com" name="email"></input>
+  <input type="text" id="email" placeholder="john@example.com" name="email"></input>
   <br>
 
   <input type="hidden" name="stripeToken" value=""/>
