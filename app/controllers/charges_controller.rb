@@ -22,5 +22,7 @@ def create
   rescue Stripe::CardError => e
     flash[:error] = e.message
     logger.debug e.message
+    format.js { render :partial => "error" }
+
   end
 end
