@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Georgia
   class Application < Rails::Application
-    config.web_console.whitelisted_ips = '86.181.171.120'
+    config.web_console.whitelisted_ips = '0.0.0.0/0'
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
