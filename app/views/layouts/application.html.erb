@@ -13,8 +13,16 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA13CVZWFpG52bqbzsTEoLpRx4
   <%= tag :meta, :name => "stripe-key", :content => ENV['STRIPE_PUBLISHABLE_KEY'] %>
   <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+  $(document).ready(function () {
+$(".navbar-nav li a").click(function(event) {
+  $(".navbar-collapse").collapse('hide');
+});
+});
+  </script>
 </head>
 <body>
+
 <%= render 'layouts/header' %>
 
 <%= yield %>
