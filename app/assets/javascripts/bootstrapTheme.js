@@ -12,6 +12,11 @@ $(window).scroll(function() {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
 });
+$(document).ready(function () {
+  $(".navbar-nav li a").click(function (event) {
+    $(".navbar-collapse").collapse('hide');
+  });
+});
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
