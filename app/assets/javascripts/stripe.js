@@ -25,8 +25,8 @@ function stripeCheckout() {
     }
   });
   handler.open({
-    name: 'Tamada Charity',
-    description: 'Donations for floods in Georgia',
+    name: 'BGS Charity Fund',
+    description: 'Donations for children in Georgia',
     currency: 'gbp',
     email: $('input[name=email]').val(),
     amount:$('input[name=amount]').val() * 100,

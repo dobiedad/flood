@@ -1,5 +1,5 @@
 class DonationNotifier < ActionMailer::Base
-  default :from => 'charity@tamadafund.com'
+  default :from => 'charity@bgsfund.co.uk'
 
   def donation_confirmation(email: email,amount: amount)
     @email = email

@@ -3,46 +3,70 @@
   <div class="intro">
     <div class="intro-body">
       <div class="container">
-        <div class="">
-          <div class="col-md-8 col-md-offset-2">
-            <a class=" animated page-scroll" href="#donate"><h1 class="brand-heading donate ">Donate Now</h1></a>
-            <a class=" animated page-scroll" href="#donate">
-              <h1 class="total_in_pounds">£<%= @total_in_pounds %></h1>
-              <h2 class="stripe-c-h2">Raised From</h2>
-              <h1><%= @donation_count %>
-                People</h1>
-            </a>
-            <a class="btn btn-circle page-scroll" href="#donate">
-              <i class="fa fa-gbp animated"></i>
-            </a>
-          </div>
+          <%= image_tag("logo.png",class:"logo") %>
         </div>
-      </div>
+        <a class=" animated page-scroll" href="#donate"><h1 class="brand-heading donate ">Donate Now</h1></a>
+        <a class=" animated page-scroll" href="#donate">
+          <h1 class="total_in_pounds">£<%= @total_in_pounds %></h1>
+          <h2 class="stripe-c-h2">Raised From</h2>
+          <h1><%= @donation_count %>
+            People</h1>
+        </a>
+        <a class="btn btn-circle page-scroll" href="#donate">
+          <i class="fa fa-gbp animated"></i>
+        </a>
     </div>
   </div>
 <!-- About Section -->
   <section class="container content-section text-center" id="about">
     <div class="">
       <div class="col-lg-8 col-lg-offset-2">
-        <h1>Tbilisi Flood</h1>
+        <h1>British Georgian Society (BGS)</h1>
+        <h2>Annual Charity Festival</h2>
         <p>
-          Over 20 people are reported dead and dozens missing as flash floods hit Tbilisi, Georgia. Lions, bears, tigers and wolves were among at least 30 animals that escaped and were on Sunday roaming the streets.
+          British Georgia Society Annual Charity Festival hosted by Tamada Restaurant invites Londoners to a day of good food and great wine, affordable art and crafts as well as entertainment for kids and adults.
         </p>
-        <h2>Live Updates</h2>
-        <a class="twitter-timeline" data-widget-id="610443197223931904" href="https://twitter.com/hashtag/tbilisiflood">#tbilisiflood Tweets</a>
-        <script>
-          !function (d, s, id) {
-            var js,
-              fjs = d.getElementsByTagName(s)[0],
-              p = /^http:/.test(d.location) ? 'http' : 'https';
-            if (!d.getElementById(id)) {
-              js = d.createElement(s);
-              js.id = id;
-              js.src = p + "://platform.twitter.com/widgets.js";
-              fjs.parentNode.insertBefore(js, fjs);
-            }
-          }(document, "script", "twitter-wjs");
-        </script>
+
+        <h3>Additional Information about the Hosts and Beneficiaries</h3>
+        <div class="">
+          <h4><a href="http://www.britishgeorgiansociety.org">British Georgia Society</a></h4>
+          <p>
+            The British Georgian Society brings together people in Great Britain and Georgia and develops greater understanding by providing a platform for activities on a wide range of Georgia-related subjects such as art, film, music, culture, archaeology, history, and business. The board and membership consists of Georgian and British members from diverse backgrounds: government, diplomacy, business, civil society, culture, academia, and mass media.
+          </p>
+        </div>
+        <p></p>
+        <div class="">
+          <h4><a href="http://www.childrenshospice.org.ge/">The First Children’s Hospice in Georgia</a></h4>
+          <p>
+            This will be the first specialised facility for kids with terminal illnesses in Georgia. The hospice is currently under construction and will be completed in December 2016. Open Society Georgia Foundation will run the hospice in partnership with Medical Corporation “Evex”. It will provide 24/7 care on the premises along with the daycare and home care services. Even though the project has plenty of friends and donors, our support will be vital as this is a very costly project. 600 000 GEL  (200 000 GBP)  has already been raised and another 200 000 GEL ( 65,000 GBP)  is needed to complete the project.
+          </p>
+          <%= image_tag("hotspice.png",class:"logo") %>
+        </div>
+        <p></p>
+        <div class="">
+          <h4><a href="http://www.afgeorgia.org/">Dzegvi Community Center</a></h4>
+          <p>
+            An abandoned orphanage building in Dzegvi is a home of mentally and physically disabled adults and their children. There are 78 people in the community. They need cloths and shoes for men and women as well as an electric wheelchair and kitchen appliances. We will be gathering for them during the even and Georgian Cargo have offered to ship our parcels free of charge.
+          </p>
+          <%= image_tag("dzvegi.png",class:"logo") %>
+        </div>
+        <p></p>
+        <div class="">
+          <h4><a href="http://www.musicastherapy.org/what_we_do/international_partnerships/project_georgia.html">The First Children’s Hospice in Georgia</a></h4>
+          <p>
+            This will be the first specialised facility for kids with terminal illnesses in Georgia. The hospice is currently under construction and will be completed in December 2016. Open Society Georgia Foundation will run the hospice in partnership with Medical Corporation “Evex”. It will provide 24/7 care on the premises along with the daycare and home care services. Even though the project has plenty of friends and donors, our support will be vital as this is a very costly project. 600 000 GEL  (200 000 GBP)  has already been raised and another 200 000 GEL ( 65,000 GBP)  is needed to complete the project.
+          </p>
+          <%= image_tag("hotspice.png",class:"logo") %>
+        </div>
+        <p></p>
+        <div class="">
+          <h4>Music as Therapy International</h4>
+          <p>
+            We would like to invite you to support a UK charity, which devises and delivers music therapy projects to disadvantaged children around the world. As part of their Georgian project 16 professionals have already received training and 72 children and adults participated in music sessions. Music Therapy International will train more staff and equip classes to run music sessions if we join forces to raise much needed sums for them.
+          </p>
+          <%= image_tag("musictherapy.png",class:"logo") %>
+        </div>
+
       </div>
     </div>
   </section>
@@ -53,7 +77,9 @@
           <div class="col-lg-8 col-lg-offset-2">
             <h1 class="">How you can help?</h1>
             <h3>Donate</h3>
-            <p>Help the people and animals recover their lives</p>
+            <p>
+              Join us and raise money in support of children in need!
+            </p>
             <%= render 'layouts/stripe' %>
           </div>
         </div>
@@ -65,17 +91,31 @@
       <div id="charity-event">
         <h1 class="charity-e-title">Charity Event @
           <a href="http://www.tamada.co.uk/">Tamada</a></h2>
-        <h2>28th June 2015</h2>
-        <p class="charity-content"><a href="http://www.tamada.co.uk/">Tamada</a>
-          hosted a charity event on the 28th of June, with multiple live performers to help Georgian people and wild nature</p>
-        <br>
-          <p class="charity-content">
-            You can still come and try
-            our famous georgian food and wine @
-              <a href="http://www.tamada.co.uk/">Tamada</a>.
-            <br>
-              Dont forget to reserve your place.
-            </p>
+        <h2>26th June 2015</h2>
+        <h4>14:00 - 21:00</h4>
+        <h4>What’s on the menu:</h4>
+        <p class="charity-content">
+            home-made cakes, freshly baked Khachapuri (traditional Georgian dish of cheese bread) and Mtsvadi (barbecued meat) a variety of vegetarian mezes and… of course wine from Georgia
+        </p>
+
+        <h4>What’s on the agenda:</h4>
+        <p class="charity-content">
+            Face-painting, DIY cupcakes and other entertainment for kids; Music, songs and dances throughout the day; Stalls of arts, crafts and souvenirs from Georgian photographers, artists and designers; Tombola, auction and surprise challenges for those who want to have fun and help to raise much needed funds.
+        </p>
+
+        <h4>How can you help:</h4>
+        <p class="charity-content">
+            Separate stalls will be raising money for different causes, choose which cause is closer to your heart and support the first Children’s Hospice in Georgia or fund music classes for children with autism.
+        </p>
+        <p class="charity-content">
+          We are also gathering clothes and footwear for Dzegvi Community Shelter, where mentally and physically disabled adults and children live.
+        </p>
+        <p class="charity-content">
+          Just pop by on the day, bring your friends and family.
+          And don’t forget to invite as many of your Facebook friends as you can to our <a href="https://www.facebook.com/events/224641487922935/">event</a>
+
+        </p>
+
             <ul class="list-inline banner-social-buttons">
               <li>
                 <a class="btn btn-default btn-lg" href="tel:+442073722882">

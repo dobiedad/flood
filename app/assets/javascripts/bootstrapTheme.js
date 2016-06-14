@@ -128,7 +128,7 @@ function init() {
             "stylers": [{
                 "saturation": 36
             }, {
-                "color": "#42dca3"
+                "color": "#e5262c"
             }, {
                 "lightness": 40
             }]

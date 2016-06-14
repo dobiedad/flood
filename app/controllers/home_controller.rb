@@ -1,5 +1,5 @@
 require "stripe"
-
+require "pry"
 class HomeController < ApplicationController
   def index
     Stripe.api_key = ENV['STRIPE_SECRET_KEY']

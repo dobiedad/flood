@@ -20,6 +20,15 @@
     .overlay {
   padding-top: 100px;
 }
+.intro-body .container {
+  max-width: 250px;
+  background: white;
+  opacity: 0.8;
+  border-radius: 50%;
+  padding: 0px;
+  margin-top: 69px;
+  margin-bottom: 10px;
+  }
 }
 @media(min-width:767px) {
     .content-section {
@@ -32,7 +41,6 @@
 
     #map {
         height: 400px;
-        margin-top: 250px;
     }
 }
 @media(min-width:768px) {
