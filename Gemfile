@@ -21,9 +21,6 @@ group :development, :test do
   gem 'pry'
 end
 group :production, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
   gem 'pg'
   gem 'rails_12factor'
 end
