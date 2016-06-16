@@ -2,7 +2,7 @@ class ChargesController < ApplicationController
   def new
 
   end
-  
+
   def create
     @amount = params[:amount].to_i * 100
     @email = params[:email]
@@ -17,7 +17,7 @@ class ChargesController < ApplicationController
       :description => 'BGS Charity Fund',
       :currency    => 'GBP'
     )
-    DonationNotifier.donation_confirmation(email: params[:email], amount: params[:amount]).deliver
+    DonationNotifier.donation_confirmation(email: params[:email], amount: params[:amount], charity_type: params[:charity_type]).deliver
 
     rescue Stripe::CardError => e
       flash[:error] = e.message

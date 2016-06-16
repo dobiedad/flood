@@ -3,10 +3,14 @@ function stripeCheckout() {
     sweetAlert("Oops...", "Please enter the amount you wish to donate ", "warning");
       return false;
     }
-    if ( $('input[name=amount]').val() < 1) {
-      sweetAlert("Oops...", "Minimum donation is £1", "warning");
+    if (!validateEmail($('input[name=email]').val())) {
+      sweetAlert("Oops...", "Please enter a valid email", "warning");
         return false;
       }
+      if ( $('select[name=charity_type]').val() < 1) {
+        sweetAlert("Oops...", "Please select which charity you wish to donate to", "warning");
+          return false;
+        }
 
   if ($('input[name=email]').val().indexOf('@') == -1) {
   sweetAlert("Oops...", "Please enter your email ", "warning");
@@ -31,6 +35,11 @@ function stripeCheckout() {
     email: $('input[name=email]').val(),
     amount:$('input[name=amount]').val() * 100,
   });
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
 }
 
 function getBalance(){

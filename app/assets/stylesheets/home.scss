@@ -322,8 +322,10 @@ body {
 
 
 //////// MY STYLES
-
-input{
+select{
+  text-transform: capitalize;
+}
+input,select{
   border: none;
   color: $skin !important;
   font-weight: 100;

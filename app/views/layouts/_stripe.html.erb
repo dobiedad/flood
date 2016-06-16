@@ -7,11 +7,21 @@
   <br>
   <input type="text" id="email" placeholder="john@example.com" name="email"></input>
   <br>
+  <label class="donation-l">Choice of charity</label>
+  <br>
+    <select name="charity_type" id="charity_type">
+      <option value="" disabled="disabled" selected="selected">Select Charity Type</option>
+      <option>The First Children’s Hospice In Georgia</option>
+      <option>Dzegvi Community Center</option>
+      <option>Music As Therapy International</option>
+    </select>
 
+
+  <br>
   <input type="hidden" name="stripeToken" value=""/>
   <br>
 <div class="">
-  <a id="checkout"class="btn btn-default btn-lg" type="button" onClick="stripeCheckout()" data-icon="<%=asset_path'stolle.png'%>">Donate
+  <a id="checkout"class="btn btn-default btn-lg" type="button" onclick="stripeCheckout()" data-icon="<%=asset_path'stolle.png'%>">Donate
   </a>
 </div>
 
