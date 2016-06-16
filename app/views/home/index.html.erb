@@ -10,7 +10,12 @@
           <h1 class="total_in_pounds">£<%= @total_in_pounds %></h1>
           <h2 class="stripe-c-h2">Raised From</h2>
           <h1><%= @donation_count %>
-            People</h1>
+            <% if @donation_count == 1%>
+            person
+            <% else %>
+            People
+            <% end %>
+          </h1>
         </a>
         <a class="btn btn-circle page-scroll" href="#donate">
           <i class="fa fa-gbp animated"></i>
