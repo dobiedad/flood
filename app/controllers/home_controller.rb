@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   end
 
   def fetch_all_transactions_after(t)
-    page = Stripe::BalanceTransaction.all(limit: 100, starting_after: t)["data"].select{ |item| item["type"] == "charge" }
+    page = Stripe::BalanceTransaction.all(limit: 100,starting_after:t, created:{"gt" => Date.new(2017,1,1).to_time.to_i})["data"].select{ |item| item["type"] == "charge" }
     if page.last.nil?
       []
     else
